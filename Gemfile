@@ -21,6 +21,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'zip'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
