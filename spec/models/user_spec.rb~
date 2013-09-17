@@ -31,7 +31,7 @@ describe User do
   end
 
   describe "when name is very long" do
-    before { @user.name = "a" * 17 }
+    before { @user.name = "a" * 100 }
     it { should_not be_valid }
   end
   
@@ -99,4 +99,10 @@ describe User do
       specify { expect(user_for_invalid_password).to be_false }
     end
   end
+
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+
 end
